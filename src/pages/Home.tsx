@@ -1,11 +1,13 @@
-import { ExampleComponent } from '@features/example';
+import Hero from '../components/Hero'
+import Navbar from '../components/Navbar'   
 
-export const Home = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>Página de Inicio</h1>
-      <ExampleComponent />
-    </div>
-  );
-};
-
+    <>
+      <Navbar />
+      <main className="pt-16">
+        <Hero />
+      </main>
+    </>
+  )
+}

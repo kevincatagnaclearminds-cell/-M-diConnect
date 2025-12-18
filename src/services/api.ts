@@ -3,7 +3,7 @@
  * Con soporte para modo mock cuando no hay backend
  */
 
-import type { ApiResponse } from '@types';
+import type { ApiResponse } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true' || !import.meta.env.VITE_API_BASE_URL;

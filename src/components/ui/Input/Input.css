@@ -35,6 +35,7 @@
   font-size: 1rem;
   transition: all 0.2s;
   background-color: white;
+  color: #1e293b; /* Color negro/gris oscuro para el texto */
 }
 
 .input:focus {

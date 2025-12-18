@@ -6,6 +6,7 @@
 export { LoginForm } from './components/LoginForm';
 export { GoogleButton } from './components/GoogleButton';
 export { PasswordResetForm } from './components/PasswordResetForm';
+export { RegisterForm } from './components/RegisterForm';
 
 // Hooks
 export { useAuth } from './hooks/useAuth';

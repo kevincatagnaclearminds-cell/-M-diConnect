@@ -3,6 +3,7 @@
  */
 
 import { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Input } from '@components/ui/Input';
 import { Button } from '@components/ui/Button';
 import { GoogleButton } from '../GoogleButton';
@@ -11,6 +12,7 @@ import { FaEnvelope, FaLock } from 'react-icons/fa';
 import './LoginForm.css';
 
 export const LoginForm = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
@@ -43,7 +45,9 @@ export const LoginForm = () => {
     }
 
     const result = await login({ email, password });
-    if (!result.success) {
+    if (result.success) {
+      navigate('/home');
+    } else {
       setErrors({ password: result.error });
     }
   };
@@ -87,7 +91,7 @@ export const LoginForm = () => {
           disabled={isLoading}
         />
 
-        <Input
+        <Input 
           type="password"
           label="Contraseña"
           placeholder="••••••••"

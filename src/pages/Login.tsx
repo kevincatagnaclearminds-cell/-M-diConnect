@@ -3,6 +3,7 @@
  */
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { LoginForm } from '@features/auth/components/LoginForm';
 import { PasswordResetForm } from '@features/auth/components/PasswordResetForm';
 import './Login.css';
@@ -40,7 +41,9 @@ export const Login = () => {
               </button>
               <div className="register-link">
                 <span>¿Necesitas una cuenta? </span>
-                <button className="register-button">Regístrate</button>
+                <Link to="/register" className="register-button">
+                  Regístrate
+                </Link>
               </div>
             </div>
           </div>
